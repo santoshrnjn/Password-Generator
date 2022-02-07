@@ -34,7 +34,9 @@ generateEl.addEventListener('click', () => {
     const hasUpper = uppercaseEl.checked;
     const hasNumber = numbersEl.checked;
     const hasSymbol = symbolsEl.checked;
-
+    if (length <= 3) {
+        return alert("Please Enter minimun password length 4");
+    }
     resultEl.innerText = generatePassword(hasLower, hasUpper, hasNumber, hasSymbol, length);
 });
 
